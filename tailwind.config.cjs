@@ -47,6 +47,7 @@ module.exports = {
         stone: {
           1000: "#0f0d0c",
         },
+        
       },
       fontFamily: {
         sans: ["Inter", "sans-serif"],

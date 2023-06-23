@@ -1,0 +1,41 @@
+---
+import ButtonMain from "@components/base/ButtonMain.astro";
+import ButtonSub from "@components/base/ButtonSub.astro";
+import HeroMainModuleOne from "@components/hero/HeroMainModuleOne.astro";
+---
+
+<div
+  class="h-96 overflow-hidden bg-muted-100 dark:bg-muted-800"
+>
+  <div class="h-96 w-full max-w-7xl mx-auto flex items-top py-12">
+    <div class="w-full grid grid-cols-12">
+      <div class="col-span-12 ltablet:col-span-5 lg:col-span-12">
+        <div
+          class="h-full ptablet:max-w-lg ptablet:mx-auto flex items-center mb-8 ltablet:mb-0 lg:mb-0"
+        >
+          <div
+            class="text-center ltablet:text-left lg:text-left font-sans space-y-4"
+          >
+           
+       
+            <h2
+            class="font-medium text-3xl dark:text-primary-400" x-text="'Halaman '+ currentUrl.replace('/','') ">
+        </h2>
+            
+            <p class="text-lg text-muted-500 dark:text-muted-400"
+            x-text="'detail halaman ' + currentUrl.replace('/', '')">
+            </p>
+            <div
+              class="w-full flex items-center justify-center ltablet:justify-start lg:justify-start gap-2"
+            >
+              <ButtonMain to={"/"} target={false} class="'min-w-[132px] min-h-[13px]'"
+                > Home</ButtonMain
+              >
+           
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -18,7 +18,7 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>FKM {"- " + title}</title>
   </head>
-  <body x-data="homeSpy()">
+  <body x-data="{ currentUrl : window.location.pathname }">
     <!-- Navbar -->
     <Navbar />
 

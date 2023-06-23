@@ -18,7 +18,7 @@ Alpine.store("app", {
     this.isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
   },
   isDark: Alpine.$persist(false),
-  isLoggedIn: Alpine.$persist(false),
+  isLoggedIn: Alpine.$persist(true),
 });
 //Start Alpine JS
 Alpine.start();

@@ -9,6 +9,7 @@ import IconBlock from "@components/content/IconBlock.astro";
 import Toolbar from "@components/content/doctors/grid/Toolbar.astro";
 import Filters from "@components/content/doctors/grid/Filters.astro";
 import Grid from "@components/content/doctors/grid/Grid.astro";
+import GridHome from "@components/content/doctors/grid/GridHome.astro";
 import SideStatsRight from "@components/content/features/SideStatsRight.astro";
 import SideStatsLeft from "@components/content/features/SideStatsLeft.astro";
 import Pricing from "@components/content/Pricing.astro";
@@ -114,23 +115,20 @@ import Testimonials from "@components/content/Testimonials.astro";
       />
 
       <div id="doctors" x-data="doctors()"  x-intersect="activeStep = 'spy-1'">
-        <Toolbar />
+       
 
         <!--Grid wrapper-->
         <div class="py-10">
           <div class="grid grid-cols-12 md:gap-12 pb-20">
             <!--Filters-->
-            <div class="hidden lg:block col-span-12 lg:col-span-3">
-              <Filters />
-            </div>
             <!--Content-->
-            <div class="col-span-12 lg:col-span-9">
+            <div class="col-span-12 lg:col-span-12">
               <!--Subgrid-->
-              <Grid />
+              <GridHome />
             </div>
           </div>
           <div class="flex items-center justify-center mt-10">
-            <ButtonMain to="#" class="'w-64 !h-14 max-w-full'">View All Doctors</ButtonMain>
+            <ButtonMain to="/doctors" class="'w-64 !h-14 max-w-full'">View All Doctors</ButtonMain>
           </div>
         </div>
       </div>
