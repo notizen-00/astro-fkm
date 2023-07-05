@@ -32,7 +32,7 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@3.1.1
         with:
           server: fkm.svr.unej.ac.id
-          username: ${{ secrets.SFTP_USERNAME }}
-          password: ${{ secrets.SFTP_PASSWORD }}
+          username: fkm-buddy
+          password: Uptti2018!
           local-dir: ./build
-          remote-dir: /path/to/remote/directory
+          remote-dir: /home/fkm-buddy/htdocs/buddy.fkm.unej.ac.id
