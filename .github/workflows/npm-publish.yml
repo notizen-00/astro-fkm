@@ -1,0 +1,38 @@
+name: Node.js Package
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: npm install -g pnpm
+      - run: pnpm install
+      - run: pnpm run build
+
+  publish-npm:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          registry-url: https://registry.npmjs.org/
+      - run: npm install -g pnpm
+      - run: pnpm install
+      - run: pnpm run build
+      - name: SFTP Transfer
+        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+        with:
+          server: fkm.svr.unej.ac.id
+          username: fkm-buddy
+          password: Uptti2018!
+          local-dir: ./build
+          remote-dir: /home/fkm-buddy/htdocs/buddy.fkm.unej.ac.id
