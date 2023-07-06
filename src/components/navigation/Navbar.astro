@@ -69,7 +69,10 @@ import NavbarSearchFilters from "@components/navigation/NavbarSearchFilters.astr
         <div class="relative py-3 lg:py-5 after:content-[''] after:absolute after:-bottom-1.5 after:left-0 after:h-[3px] after:rounded-t-full after:transition-all after:duration-300 transition-colors duration-300"
           :class="currentUrl.includes('about') ? 'text-primary-500 after:bg-primary-500 after:w-full' : 'text-slate-500 dark:text-slate-400 hover:text-muted-700 dark:hover:text-muted-100 after:w-0'"
         >
-          <a href="/about">Penelitian & Pengabdian</a>
+          <a href="/about">Penelitian</a>
+        </div>
+        <div class="relative py-3 lg:py-5 text-slate-500 dark:text-slate-400 hover:text-muted-700 dark:hover:text-muted-100 transition-colors duration-300">
+          <a href="#">Pengabdian</a>
         </div>
         <div class="relative py-3 lg:py-5 text-slate-500 dark:text-slate-400 hover:text-muted-700 dark:hover:text-muted-100 transition-colors duration-300">
           <a href="#">GPM</a>
@@ -86,11 +89,6 @@ import NavbarSearchFilters from "@components/navigation/NavbarSearchFilters.astr
       <div class="w-full md:w-auto">
         <ButtonMain to={"https://stats.fkm.unej.ac.id"} target={false} class="'w-full md:w-[240px] lg:w-[110px]'"
           >Statistik </ButtonMain
-        >
-      </div>
-      <div class="w-full md:w-auto">
-        <ButtonMain to={"https://io.fkm.unej.id"} target={false} class="'w-full md:w-[240px] lg:w-[110px]'"
-          >Status I/O </ButtonMain
         >
       </div>
     </div>
