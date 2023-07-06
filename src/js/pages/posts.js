@@ -27,6 +27,18 @@ export function posts(){
                 name
               }
             }
+            featuredImage {
+              node {
+                author {
+                  node {
+                    avatar {
+                      url
+                    }
+                  }
+                }
+                sourceUrl(size: THUMBNAIL)
+              }
+            }
           }
         }
       }
@@ -34,6 +46,7 @@ export function posts(){
   })
   .then((response) => {
     const posts = response.data.data.posts.nodes;
+    console.log(posts);
     return posts;
    
   })

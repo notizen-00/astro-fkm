@@ -1,176 +1,44 @@
 ---
 import Card from "@components/base/Card.astro";
+
 ---
 
-<div class="grid md:grid-cols-3 ltablet:grid-cols-3 lg:grid-cols-3 gap-x-6 ptablet:gap-x-4 gap-y-16 pt-10">
-  <div x-show="activeCategory === 'all' || activeCategory === 'cardiology'">
-    <Card class="'p-4'">
-      <div
-        class="relative w-full h-40 rounded-lg bg-muted-200 dark:bg-muted-800"
-      >
-        <img
-          class="absolute bottom-0 inset-x-0 mx-auto w-full max-w-[170px] ptablet:max-w-[150px]"
-          src="/img/illustrations/doctors/doctor-1.svg"
-          alt="Doctor"
-        />
+<div class="grid md:grid-cols-3 ltablet:grid-cols-3 lg:grid-cols-3 gap-x-6 ptablet:gap-x-4 gap-y-16 pt-10 posts()">
+ 
+    <template x-for="post in posts" :key="post.id">
+      <div x-show="activeCategory === 'all' || activeCategory === 'cardiology'">
+        <Card class="'p-4'">
+          <div class="relative w-full h-40 rounded-lg bg-muted-200 dark:bg-muted-800">
+            <img class="absolute bottom-0 inset-x-0 mx-auto w-full max-w-[170px] ptablet:max-w-[150px]"
+            :src="post.featuredImage?.node.sourceUrl || './img/logo/logo-square.svg' " alt="Doctor" />
+          </div>
+          <div class="font-sans mt-3">
+            <h4 class="font-semibold text-muted-800 dark:text-muted-100" x-text="post.title">
+              
+            </h4>
+            <p class="text-sm text-muted-400" x-text="post.categories.nodes[0].name" ></p>
+          </div>
+          <div class="mt-2">
+            <p class="text-sm ptablet:text-xs text-muted-500 dark:text-muted-400" x-html="filterText(post.content, 50)">
+      
+            </p>
+          </div>
+          <div class="flex items-center justify-between font-sans mt-3">
+            <div class="flex items-center gap-2">
+             
+              <button :tooltip="post.author.node.name"
+                class="h-8 w-8 rounded-full text-muted-400 hover:text-primary-500 hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-800 flex items-center justify-center tw-accessiblity transition-colors duration-300">
+                <i class="iconify w-4 h-4" data-icon="ph:user-duotone"></i>
+              </button>
+              <p class="text-muted-400" x-text="post.author.node.name" ></p>
+            </div>
+            <div class="flex items-center justify-end gap-2">
+              <i class="iconify w-4 h-4 text-yellow-400" data-icon="uiw:star-on"></i>
+              <span class="font-semibold text-xs text-muted-500 dark:text-muted-400">4.8/5</span>
+            </div>
+          </div>
+        </Card>
       </div>
-      <div class="font-sans mt-3">
-        <h4 class="font-semibold text-muted-800 dark:text-muted-100">
-          Dr. Melissa Thorman
-        </h4>
-        <p class="text-sm text-muted-400">Cardiologist</p>
-      </div>
-      <div class="mt-2">
-        <p class="text-sm ptablet:text-xs text-muted-500 dark:text-muted-400">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ergo illi
-          intellegunt quid
-        </p>
-      </div>
-      <div class="flex items-center justify-between font-sans mt-3">
-        <div class="flex items-center gap-2">
-          <button
-            tooltip="Book appointment"
-            class="h-8 w-8 rounded-full text-muted-400 hover:text-primary-500 hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-800 flex items-center justify-center tw-accessiblity transition-colors duration-300"
-          >
-            <i class="iconify w-4 h-4" data-icon="ph:calendar-check-duotone"
-            ></i>
-          </button>
-          <button
-            tooltip="Send message"
-            class="h-8 w-8 rounded-full text-muted-400 hover:text-primary-500 hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-800 flex items-center justify-center tw-accessiblity transition-colors duration-300"
-          >
-            <i class="iconify w-4 h-4" data-icon="ph:chat-circle-duotone"></i>
-          </button>
-          <button
-            tooltip="View profile"
-            class="h-8 w-8 rounded-full text-muted-400 hover:text-primary-500 hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-800 flex items-center justify-center tw-accessiblity transition-colors duration-300"
-          >
-            <i class="iconify w-4 h-4" data-icon="ph:user-duotone"></i>
-          </button>
-        </div>
-        <div class="flex items-center justify-end gap-2">
-          <i class="iconify w-4 h-4 text-yellow-400" data-icon="uiw:star-on"
-          ></i>
-          <span class="font-semibold text-xs text-muted-500 dark:text-muted-400"
-            >4.8/5</span
-          >
-        </div>
-      </div>
-    </Card>
-  </div>
-  <!-- Doctor -->
-  <div x-show="activeCategory === 'all' || activeCategory === 'gynaecology'">
-    <Card class="'p-4'">
-      <div
-        class="relative w-full h-40 rounded-lg bg-muted-200 dark:bg-muted-800"
-      >
-        <img
-          class="absolute bottom-0 inset-x-0 mx-auto w-full max-w-[170px] ptablet:max-w-[150px]"
-          src="/img/illustrations/doctors/doctor-2.svg"
-          alt="Doctor"
-        />
-      </div>
-      <div class="font-sans mt-3">
-        <h4 class="font-semibold text-muted-800 dark:text-muted-100">
-          Dr. Aaron Zimmerman
-        </h4>
-        <p class="text-sm text-muted-400">Gynaecologist</p>
-      </div>
-      <div class="mt-2">
-        <p class="text-sm ptablet:text-xs text-muted-500 dark:text-muted-400">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ergo illi
-          intellegunt quid
-        </p>
-      </div>
-      <div class="flex items-center justify-between font-sans mt-3">
-        <div class="flex items-center gap-2">
-          <button
-            tooltip="Book appointment"
-            class="h-8 w-8 rounded-full text-muted-400 hover:text-primary-500 hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-800 flex items-center justify-center tw-accessiblity transition-colors duration-300"
-          >
-            <i class="iconify w-4 h-4" data-icon="ph:calendar-check-duotone"
-            ></i>
-          </button>
-          <button
-            tooltip="Send message"
-            class="h-8 w-8 rounded-full text-muted-400 hover:text-primary-500 hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-800 flex items-center justify-center tw-accessiblity transition-colors duration-300"
-          >
-            <i class="iconify w-4 h-4" data-icon="ph:chat-circle-duotone"></i>
-          </button>
-          <button
-            tooltip="View profile"
-            class="h-8 w-8 rounded-full text-muted-400 hover:text-primary-500 hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-800 flex items-center justify-center tw-accessiblity transition-colors duration-300"
-          >
-            <i class="iconify w-4 h-4" data-icon="ph:user-duotone"></i>
-          </button>
-        </div>
-        <div class="flex items-center justify-end gap-2">
-          <i class="iconify w-4 h-4 text-yellow-400" data-icon="uiw:star-on"
-          ></i>
-          <span class="font-semibold text-xs text-muted-500 dark:text-muted-400"
-            >4.4/5</span
-          >
-        </div>
-      </div>
-    </Card>
-  </div>
-
-  <div x-show="activeCategory === 'all' || activeCategory === 'gynaecology'">
-    <Card class="'p-4'">
-      <div
-        class="relative w-full h-40 rounded-lg bg-muted-200 dark:bg-muted-800"
-      >
-        <img
-          class="absolute bottom-0 inset-x-0 mx-auto w-full max-w-[170px] ptablet:max-w-[150px]"
-          src="/img/illustrations/doctors/doctor-2.svg"
-          alt="Doctor"
-        />
-      </div>
-      <div class="font-sans mt-3">
-        <h4 class="font-semibold text-muted-800 dark:text-muted-100">
-         Dr. Dipta Ikromi M
-        </h4>
-        <p class="text-sm text-muted-400">Gynaecologist</p>
-      </div>
-      <div class="mt-2">
-        <p class="text-sm ptablet:text-xs text-muted-500 dark:text-muted-400">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ergo illi
-          intellegunt quid
-        </p>
-      </div>
-      <div class="flex items-center justify-between font-sans mt-3">
-        <div class="flex items-center gap-2">
-          <button
-            tooltip="Book appointment"
-            class="h-8 w-8 rounded-full text-muted-400 hover:text-primary-500 hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-800 flex items-center justify-center tw-accessiblity transition-colors duration-300"
-          >
-            <i class="iconify w-4 h-4" data-icon="ph:calendar-check-duotone"
-            ></i>
-          </button>
-          <button
-            tooltip="Send message"
-            @click="chat()"
-            class="h-8 w-8 rounded-full text-muted-400 hover:text-primary-500 hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-800 flex items-center justify-center tw-accessiblity transition-colors duration-300"
-          >
-            <i class="iconify w-4 h-4" data-icon="ph:chat-circle-duotone"></i>
-          </button>
-          <button
-            tooltip="View profile"
-            class="h-8 w-8 rounded-full text-muted-400 hover:text-primary-500 hover:enabled:bg-muted-100 dark:hover:enabled:bg-muted-800 flex items-center justify-center tw-accessiblity transition-colors duration-300"
-          >
-            <i class="iconify w-4 h-4" data-icon="ph:user-duotone"></i>
-          </button>
-        </div>
-        <div class="flex items-center justify-end gap-2">
-          <i class="iconify w-4 h-4 text-yellow-400" data-icon="uiw:star-on"
-          ></i>
-          <span class="font-semibold text-xs text-muted-500 dark:text-muted-400"
-            >4.4/5</span
-          >
-        </div>
-      </div>
-    </Card>
-  </div>
-
+    </template>
 
 </div>

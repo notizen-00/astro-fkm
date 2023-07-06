@@ -15,4 +15,197 @@
   .tw-accessibility-static {
     @apply outline-dashed outline-muted-300 dark:outline-muted-600 outline-offset-2;
   }
+
+  /************************************************
+  Audio Blocks
+************************************************/
+
+.wp-block-audio {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+.wp-block-audio audio {
+	width: 100%;
+}
+
+/************************************************
+  Blockquotes
+************************************************/
+
+blockquote,
+blockquote.wp-block-quote {
+	font-size: 130%;
+	line-height: 1.5;
+	margin: 32px 0px;
+	padding: 12px 18px;
+	border-left: 2px solid rgba(0, 0, 0, 0.12);
+}
+.wp-block-quote:not(.is-large):not(.is-style-large) {
+	padding-left: 18px;
+	border-left: 2px solid rgba(0, 0, 0, 0.12);
+}
+.wp-block-quote__citation,
+.wp-block-quote cite,
+.wp-block-quote footer {
+	display: block;
+	color: rgba(0, 0, 0, 0.4);
+	font-size: 0.85rem;
+	margin-top: 12px;
+}
+.wp-block-quote cite::before,
+.wp-block-quote footer::before {
+	content: '— '
+}
+
+/************************************************
+  Buttons
+************************************************/
+
+.wp-block-button {
+	position: relative;
+	box-sizing: border-box;
+}
+.wp-block-button.alignwide a {
+	display: block;
+}
+
+/************************************************
+  Code Blocks
+************************************************/
+
+code, pre, .wp-block-code {
+	color: #666666;
+	font-family: Courier, sans-serif;
+	line-height: 1.4;
+	margin: 32px 0px;
+	padding: 12px;
+	border: 2px solid rgba(0, 0, 0, 0.24);
+	box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	border-radius: 3px;
+}
+
+/************************************************
+  Cover Images
+************************************************/
+
+.wp-block-cover,
+.wp-block-cover-image {
+	margin-top: 32px;
+	margin-bottom: 32px;
+}
+.wp-block-cover-image.has-background-dim,
+.wp-block-cover-image.has-background-dim h2 {
+	color: #ffffff;
+}
+
+/************************************************
+  Gallery Blocks
+************************************************/
+
+.wp-block-gallery .blocks-gallery-item {
+	margin-left: 0px;
+	margin-right: 0px;
+	padding: 0px;
+}
+.wp-block-gallery .blocks-gallery-image {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+.wp-block-gallery .blocks-gallery-image figcaption,
+.wp-block-gallery .blocks-gallery-item figcaption {
+	box-sizing: border-box;
+}
+
+/************************************************
+  Images
+************************************************/
+
+.wp-block-image {
+	max-width: none;
+	margin: 32px auto;
+	padding: 0px;
+}
+img.aligncenter,
+.wp-block-image.aligncenter {
+	display: block;
+	margin: 12px auto;
+	padding: 0px;
+}
+img.alignnone,
+.wp-block-image.alignnone {
+	display: inline;
+	margin: 12px 0px;
+	padding: 0px;
+}
+img.alignright,
+.wp-block-image.alignright {
+	display: inline;
+	margin: 16px 0px 16px 24px;
+	padding: 0px;
+}
+img.alignleft,
+.wp-block-image.alignleft {
+	display: inline;
+	margin: 16px 24px 16px 0px;
+	padding: 0px;
+}
+
+/************************************************
+  Tables
+************************************************/
+
+table,
+table.wp-block-table {
+	width: 100%;
+	text-align: left;
+	margin: 32px 0px;
+	padding: 0px;
+	box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+	border: 3px solid rgba(0, 0, 0, 0.12);
+	border-spacing: 0;
+	border-radius: 4px;
+}
+table p,
+table form,
+table ul,
+table li {
+	margin: 6px 0px;
+	padding: 0px;
+}
+table thead,
+table tfoot,
+table.wp-block-table thead,
+table.wp-block-table tfoot {
+	border: 1px solid #dddddd;
+	border: 1px solid rgba(0, 0, 0, 0.12);
+}
+table tbody tr:nth-child(odd) {
+	background: rgba(0, 0, 0, 0.04);
+}
+table th,
+table.wp-block-table th {
+	font-size: 1.1rem;
+	text-transform: uppercase;
+	margin: 0px;
+	padding: 12px;
+	border-top: 1px solid #dddddd;
+	border-top: 1px solid rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+}
+table td,
+table.wp-block-table td {
+	padding: 12px;
+	margin: 0px;
+	border-top: 1px solid #dddddd;
+	border-top: 1px solid rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+}
+table.wp-block-table.is-style-stripes {
+	border-collapse: collapse;
+}
+table.wp-block-table.is-style-stripes td {
+	border: 1px solid #dddddd;
+	border: 1px solid rgba(0, 0, 0, 0.12);
+}
 }
