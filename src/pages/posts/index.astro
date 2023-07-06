@@ -1,0 +1,24 @@
+---
+import Layout from "@layouts/Default.astro";
+import HeroPage from "@components/hero/HeroPage.astro";
+import SectionMuted from "@components/section/SectionMuted.astro";
+import Container from "@components/section/Container.astro";
+import SectionTitle from "@components/section/SectionTitle.astro";
+
+
+---
+
+<Layout title="Post">
+  <HeroPage></HeroPage>
+  <SectionMuted>
+    <Container>
+      <SectionTitle
+        title="Pricing Options"
+        subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tibi hoc incredibile, quod beatissimum."
+        minititle="Simple Pricing"
+        class="'mx-auto text-center'"
+      />
+    
+    </Container>
+  </SectionMuted>
+</Layout>

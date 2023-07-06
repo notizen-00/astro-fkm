@@ -1,0 +1,16 @@
+import { AstroComponent, renderToStaticMarkup } from '@astrojs/react';
+
+export default class MyComponent extends AstroComponent {
+  astro() {
+    return renderToStaticMarkup(
+      <div>
+        <div x-data>
+          <textarea id="editor" x-ref="editor"></textarea>
+          <button x-on:click="$refs.editor.editorInstance.setData('<p>Hello CKEditor</p>')">
+            Set Data
+          </button>
+        </div>
+      </div>
+    );
+  }
+}

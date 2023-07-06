@@ -46,7 +46,7 @@ export function posts(){
   })
   .then((response) => {
     const posts = response.data.data.posts.nodes;
-    console.log(posts);
+    
     return posts;
    
   })

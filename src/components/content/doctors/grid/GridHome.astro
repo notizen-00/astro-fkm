@@ -1,11 +1,12 @@
 ---
 import Card from "@components/base/Card.astro";
-
+import ButtonMain from "@components/base/ButtonMain.astro";
 ---
 
 <div class="grid md:grid-cols-3 ltablet:grid-cols-3 lg:grid-cols-3 gap-x-6 ptablet:gap-x-4 gap-y-16 pt-10 posts()">
  
     <template x-for="post in posts" :key="post.id">
+      
       <div x-show="activeCategory === 'all' || activeCategory === 'cardiology'">
         <Card class="'p-4'">
           <div class="relative w-full h-40 rounded-lg bg-muted-200 dark:bg-muted-800">
@@ -33,12 +34,14 @@ import Card from "@components/base/Card.astro";
               <p class="text-muted-400" x-text="post.author.node.name" ></p>
             </div>
             <div class="flex items-center justify-end gap-2">
-              <i class="iconify w-4 h-4 text-yellow-400" data-icon="uiw:star-on"></i>
-              <span class="font-semibold text-xs text-muted-500 dark:text-muted-400">4.8/5</span>
+             <a :href="`/posts/${post.slug}`" class="relative font-sans font-normal inline-flex items-center justify-center leading-5 no-underline space-x-1 text-white bg-primary-600 h-12 px-5 py-3 text-sm rounded-xl hover:bg-primary-700 hover:shadow-xl hover:shadow-primary-600/20 tw-accessibility transition-all duration-300">Read More</a>
+            
             </div>
           </div>
         </Card>
       </div>
+
+
     </template>
 
 </div>

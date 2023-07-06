@@ -1,0 +1,31 @@
+---
+import ButtonMain from "@components/base/ButtonMain.astro";
+import ButtonSub from "@components/base/ButtonSub.astro";
+import HeroMainModuleOne from "@components/hero/HeroMainModuleOne.astro";
+const { judul} = Astro.props;
+---
+
+<div
+  class="h-96 overflow-hidden bg-muted-100 dark:bg-muted-800"
+>
+  <div class="h-96 w-full max-w-7xl mx-auto flex items-top py-12 ">
+    <div class="w-full grid grid-cols-12">
+      <div class="col-span-12 ltablet:col-span-5 lg:col-span-12">
+        <div
+          class="h-full ptablet:max-w-lg ptablet:mx-auto flex items-center mb-4 ltablet:mb-0 lg:mb-0"
+        >
+          <div
+            class="text-center ltablet:text-left lg:text-left font-sans space-y-1"
+          >
+            <h2
+            class="font-medium text-3xl dark:text-primary-400" >
+            {judul}
+            </h2>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

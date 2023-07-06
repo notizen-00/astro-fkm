@@ -1,0 +1,52 @@
+---
+import Layout from "@layouts/Default.astro";
+import HeroBlog from "@components/hero/HeroBlog.astro";
+import SectionMuted from "@components/section/SectionMuted.astro";
+import Container from "@components/section/Container.astro";
+import SectionTitle from "@components/section/SectionTitle.astro";
+import Card from "@components/base/Card.astro";
+import axios from 'axios';
+
+export async function getStaticPaths() {
+  try {
+    const response = await axios.post('https://cms.fkm.unej.ac.id/graphql', {
+      query: `
+        query {
+          posts {
+            nodes {
+              slug
+              title
+              content
+            }
+          }
+        }
+      `,
+    });
+
+    const posts = response.data.data.posts.nodes;
+    return posts.map((post) => ({
+      params: { slug: post.slug },
+      props: { title: post.title, content: post.content },
+    }));
+  } catch (error) {
+    console.error(error);
+    return [];
+  }
+}
+
+const { title, content } = Astro.props;
+---
+
+
+
+<Layout title={title}>
+  <HeroBlog judul={title}/>
+  <SectionMuted>
+    <Container>
+      
+      <Card className="p-6 text-primary-400" set:html={content} >
+      </Card>
+    
+    </Container>
+  </SectionMuted>
+</Layout>
