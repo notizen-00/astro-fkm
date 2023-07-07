@@ -9,7 +9,7 @@ const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="id" x-data="theme()" :class="$store.app.isDark ? 'dark' : ''">
+<html lang="en" x-data="theme()" :class="$store.app.isDark ? 'dark' : ''">
   <head>
     <meta charset="UTF-8" />
     <Unfont />
@@ -53,16 +53,14 @@ const { title } = Astro.props;
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <!-- <meta name="title" content="Fakultas Kesehatan Masyarakat - Agro-Coastal Community - Universitas Jember" />
     <meta name="description" content="Fakultas Kesehatan Masyarakat adalah salah satu fakultas yang berada di bawah naungan Universitas Jember" />
-    <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large" />
+    <!-- <meta name="robots" content="noindex"/> -->
+    <!-- <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large" /> -->
     <meta name="language" content="Indonesia" />
     <meta name="author" content="HUMAS & IT FKM UNEJ" />
     <meta name="copyright" content="Fakultas Kesehatan Masyarakat - Universitas Jember">
     <link rel="icon" type="image/svg+xml" href="/img/favicon.svg" /> -->
     <meta name="generator" content={Astro.generator} />
     <title>Fakultas Kesehatan Masyarakat - Agro-Coastal Community - Universitas Jember {"- " + title}</title>
-
-
-
   </head>
   <body x-data="{ currentUrl : window.location.pathname }">
     <!-- Navbar -->
