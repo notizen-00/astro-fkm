@@ -22,11 +22,11 @@ const { title } = Astro.props;
       basic: {
         title: "Fakultas Kesehatan Masyarakat Universitas Jember",
         type: "A type.",
-        image: "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+        image: "https://github.com/notizen-00/astro-fkm/blob/addb59847cfbee8449c5f67e5419db976555a1a3/public/img/logo/fkmunej-agrocoastal.png",
       }
     }}
     twitter={{
-      creator: "@univ_jember"
+      creator: "@upttiuj"
     }}
     extend={{
       // extending the default link tags
@@ -35,9 +35,9 @@ const { title } = Astro.props;
       meta: [
         {
           name: "twitter:image",
-          content: "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+          content: "https://github.com/notizen-00/astro-fkm/blob/addb59847cfbee8449c5f67e5419db976555a1a3/public/img/logo/fkmunej-agrocoastal.png",
         },
-        { name: "twitter:title", content: "Tinker Tailor Soldier Spy" },
+        { name: "twitter:title", content: "Fakultas Kesehatan Masyarakat Universitas jember" },
         { name: "twitter:description", content: "Agent" },
         {
           name:"author",content:"HUMAS & IT FKM UNEJ"
@@ -52,8 +52,15 @@ const { title } = Astro.props;
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  
-    <title>Fakultas Kesehatan Masyarakat - Agro-Coastal Community - Universitas Jember {"- " + title}</title>
+    <meta name="robots" content="noydir,noodp">
+    <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+    <meta name="keywords" content="fkm, kesehatan, kesmas, kesehatan masyarakat, sister unej,unej,universitas jember,sso unej,mbkm,jember,sbmptbr,repository,mmp,oaiphm">
+    <link rel="canonical" href="https://fkm.unej.ac.id/" />
+    <link rel='shortlink' href='https://fkm.unej.ac.id/' />
+    <link rel="apple-touch-icon" href="https://github.com/notizen-00/astro-fkm/blob/addb59847cfbee8449c5f67e5419db976555a1a3/public/img/logo/fkmunej-agrocoastal.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link href='https://github.com' crossorigin='anonymous' rel='preconnect' />
+    <title>Fakultas Kesehatan Masyarakat - Universitas Jember {"- " + title}</title>
   </head>
   <body x-data="{ currentUrl : window.location.pathname }">
     <!-- Navbar -->
