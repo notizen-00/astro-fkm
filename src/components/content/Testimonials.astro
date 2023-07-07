@@ -6,11 +6,11 @@ import Card from "@components/base/Card.astro";
 <div x-cloak class="relative overflow-hidden" x-intersect="activeStep = ''">
   <div x-data="swiper()" class="carousel-container">
     <div class="carousel-controls flex items-center justify-end mb-4">
-      <button class="w-10 h-10 flex items-center justify-center rounded-xl text-muted-600 hover:text-primary-600 dark:text-muted-300 dark:hover:text-muted-100 hover:bg-muted-200 dark:hover:bg-muted-900 transition-colors duration-300" @click="swiper.slidePrev()">
+      <button aria-label="swipe-left" class="w-10 h-10 flex items-center justify-center rounded-xl text-muted-600 hover:text-primary-600 dark:text-muted-300 dark:hover:text-muted-100 hover:bg-muted-200 dark:hover:bg-muted-900 transition-colors duration-300" @click="swiper.slidePrev()">
         <i class="iconify" data-icon="lucide:arrow-left"></i>
       </button>
 
-      <button class="w-10 h-10 flex items-center justify-center rounded-xl text-muted-600 hover:text-primary-600 dark:text-muted-300 dark:hover:text-muted-100 hover:bg-muted-200 dark:hover:bg-muted-900 transition-colors duration-300" @click="swiper.slideNext()">
+      <button aria-label="swipe-right" class="w-10 h-10 flex items-center justify-center rounded-xl text-muted-600 hover:text-primary-600 dark:text-muted-300 dark:hover:text-muted-100 hover:bg-muted-200 dark:hover:bg-muted-900 transition-colors duration-300" @click="swiper.slideNext()">
         <i class="iconify" data-icon="lucide:arrow-right"></i>
       </button>
     </div>

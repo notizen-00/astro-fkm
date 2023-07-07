@@ -1,8 +1,9 @@
-<label x-cloak
+<label x-cloak for="themeToggle"
   class="block w-9 h-9 overflow-hidden relative mx-auto lg:m-0 rounded-full focus-visible:tw-accessibility-static"
 >
   <input
     type="checkbox"
+    id="themeToggle"
     class="absolute top-0 left-0 z-[2] w-full h-full opacity-0 cursor-pointer"
     @change="toggleTheme()"
   />
@@ -71,5 +72,6 @@
           d="M21 12.79A9 9 0 1 1 11.21 3A7 7 0 0 0 21 12.79z"></path>
       </g>
     </svg>
+    <span class="sr-only">Toggle theme</span>
   </span>
 </label>

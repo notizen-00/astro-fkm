@@ -30,11 +30,7 @@ import NavbarSearchFilters from "@components/navigation/NavbarSearchFilters.astr
           >Agro-Coastal Community</span
         >
       </a>
-      <div
-        role="button"
-        class="hidden md:block relative"
-        @click.away="closeFilters()"
-      >
+     
       
         <div
           class="absolute top-0 left-0 h-10 w-10 flex justify-center items-center text-slate-400 peer-focus:text-primary-500 peer-disabled:opacity-20 transition-colors duration-300"
@@ -80,51 +76,7 @@ import NavbarSearchFilters from "@components/navigation/NavbarSearchFilters.astr
         <!-- <div class="relative py-3 lg:py-5 text-slate-500 dark:text-slate-400 hover:text-muted-700 dark:hover:text-muted-100 transition-colors duration-300">
           <a href="#">GPM</a>
         </div> -->
-        <div x-data="{ open: false }" class="relative">
-          <div
-            @click="open = !open"
-            class="relative py-3 lg:py-5 text-slate-500 dark:text-slate-400 hover:text-muted-700 dark:hover:text-muted-100 transition-colors duration-300 cursor-pointer"
-          >
-            <span class="inline-flex items-center">
-              Test
-              <svg
-                class="w-4 h-4 ml-1"
-                x-bind:class="{'rotate-180': open}"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M10 12a1 1 0 0 1-.707-.293l-4-4a1 1 0 0 1 1.414-1.414L10 9.586l3.293-3.293a1 1 0 0 1 1.414 1.414l-4 4A1 1 0 0 1 10 12z"
-                />
-              </svg>
-            </span>
-          </div>
-          <div
-            x-show="open"
-            @click.away="open = false"
-            class="absolute z-10 w-40 mt-2 py-2 bg-white dark:bg-muted-900 rounded-md shadow-lg"
-          >
-            <a
-              href="#"
-              class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-muted-800"
-            >
-              1
-            </a>
-            <a
-              href="#"
-              class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-muted-800"
-            >
-              2
-            </a>
-            <a
-              href="#"
-              class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-muted-800"
-            >
-              3
-            </a>
-          </div>
+        
         <div class="relative py-3 lg:py-5 text-slate-500 dark:text-slate-400 hover:text-muted-700 dark:hover:text-muted-100 transition-colors duration-300">
           <a href="https://blog.fkm.unej.ac.id/" target="_blank">Blog</a>
         </div>
