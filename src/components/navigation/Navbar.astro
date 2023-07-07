@@ -30,7 +30,12 @@ import NavbarSearchFilters from "@components/navigation/NavbarSearchFilters.astr
           >Agro-Coastal Community</span
         >
       </a>
-     
+      <div
+        role="button"
+        aria-label="Tutup-Filter"
+        class="hidden md:block relative"
+        @click.away="closeFilters()"
+      >
       
         <div
           class="absolute top-0 left-0 h-10 w-10 flex justify-center items-center text-slate-400 peer-focus:text-primary-500 peer-disabled:opacity-20 transition-colors duration-300"

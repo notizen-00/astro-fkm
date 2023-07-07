@@ -65,6 +65,9 @@ dependencies:
   astro-compress:
     specifier: ^1.1.49
     version: 1.1.49
+  astro-critters:
+    specifier: ^1.1.39
+    version: 1.1.39
   astro-robots-txt:
     specifier: ^0.5.0
     version: 0.5.0
@@ -1636,6 +1639,13 @@ packages:
       terser: 5.18.2
     dev: false
 
+  /astro-critters@1.1.39:
+    resolution: {integrity: sha512-Y4sqVwIAqEdpABEbf4mO0sB1KuibAjng7vxw66qrOrCkZuOoozqf3lbGWiB9PDqR6vQHTMr9zjcDcpxb1GRg0Q==}
+    dependencies:
+      critters: 0.0.19
+      files-pipe: 0.0.7
+    dev: false
+
   /astro-robots-txt@0.5.0:
     resolution: {integrity: sha512-MJDcxBDjEKSp7Uvw32cnmkPHlmjQ/pW5JwzMhKEegFRoGaiSh2i1kkh1QEhk1UpGnAsSondWCoIt2xpG8qjSgA==}
     dependencies:
@@ -2100,6 +2110,18 @@ packages:
   /cookie@0.5.0:
     resolution: {integrity: sha512-YZ3GUyn/o8gfKJlnlX7g7xq4gyO6OSuhGPKaaGssGB2qgDUS0gPgtTvoyZLTt9Ab6dC4hfc9dV5arkvc/OCmrw==}
     engines: {node: '>= 0.6'}
+    dev: false
+
+  /critters@0.0.19:
+    resolution: {integrity: sha512-Fm4ZAXsG0VzWy1U30rP4qxbaWGSsqXDgSupJW1OUJGDAs0KWC+j37v7p5a2kZ9BPJvhRzWm3be+Hc9WvQOBUOw==}
+    dependencies:
+      chalk: 4.1.2
+      css-select: 5.1.0
+      dom-serializer: 2.0.0
+      domhandler: 5.0.3
+      htmlparser2: 8.0.2
+      postcss: 8.4.24
+      pretty-bytes: 5.6.0
     dev: false
 
   /cross-spawn@7.0.3:
@@ -2733,6 +2755,15 @@ packages:
 
   /html-void-elements@2.0.1:
     resolution: {integrity: sha512-0quDb7s97CfemeJAnW9wC0hw78MtW7NU3hqtCD75g2vFlDLt36llsYD7uB7SUzojLMP24N5IatXf7ylGXiGG9A==}
+    dev: false
+
+  /htmlparser2@8.0.2:
+    resolution: {integrity: sha512-GYdjWKDkbRLkZ5geuHs5NY1puJ+PXwP7+fHPRz06Eirsb9ugf6d8kkXav6ADhcODhFFPMIXyxkxSuMf3D6NCFA==}
+    dependencies:
+      domelementtype: 2.3.0
+      domhandler: 5.0.3
+      domutils: 3.1.0
+      entities: 4.5.0
     dev: false
 
   /human-signals@3.0.1:
@@ -3828,7 +3859,6 @@ packages:
       nanoid: 3.3.6
       picocolors: 1.0.0
       source-map-js: 1.0.2
-    dev: true
 
   /prebuild-install@7.1.1:
     resolution: {integrity: sha512-jAXscXWMcCK8GgCoHOfIr0ODh5ai8mj63L2nWrjuAgXE6tDyYGnx4/8o/rCgU+B4JSyZBKbeZqzhtwtC3ovxjw==}
@@ -3873,6 +3903,11 @@ packages:
     resolution: {integrity: sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==}
     engines: {node: '>=10.13.0'}
     hasBin: true
+    dev: false
+
+  /pretty-bytes@5.6.0:
+    resolution: {integrity: sha512-FFw039TmrBqFK8ma/7OL3sDz/VytdtJr044/QUJtH0wK9lb9jLq9tJyIxUwtQJHwar2BqtiA4iCWSwo9JLkzFg==}
+    engines: {node: '>=6'}
     dev: false
 
   /prismjs@1.29.0:
@@ -4792,7 +4827,7 @@ packages:
         optional: true
     dependencies:
       esbuild: 0.17.18
-      postcss: 8.4.23
+      postcss: 8.4.24
       rollup: 3.21.0
     optionalDependencies:
       fsevents: 2.3.2

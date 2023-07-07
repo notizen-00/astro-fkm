@@ -2,6 +2,7 @@
 import Unfont from 'unplugin-fonts/astro/component.astro';
 import Navbar from "@components/navigation/Navbar.astro";
 import Footer from "@components/section/Footer.astro";
+import  GoogleAnalytics from "@components/ga/GoogleAnalytics.jsx";
 import { SEO } from 'astro-seo';
 import 'swiper/swiper-bundle.css';
 import "../styles/main.css";
@@ -61,10 +62,13 @@ const { title } = Astro.props;
     <!-- Body slot -->
     <slot />
 
+
+    <GoogleAnalytics id="G-RTZ40J5VSD" partytown={true}/>
     <!-- Footer -->
     <Footer />
 
     <!-- Main script -->
     <script src="../js/main"></script>
+  
   </body>
 </html>

@@ -5,11 +5,12 @@ import { Editor } from '@tinymce/tinymce-react';
 import react from "@astrojs/react";
 import robotsTxt from "astro-robots-txt";
 import partytown from "@astrojs/partytown";
-
 import sitemap from "@astrojs/sitemap";
 
-// https://astro.build/config
 import compress from "astro-compress";
+
+// https://astro.build/config
+import critters from "astro-critters";
 
 // https://astro.build/config
 export default defineConfig({
@@ -18,5 +19,5 @@ export default defineConfig({
     google: {
       families: ['Inter']
     }
-  }), react(), robotsTxt(), partytown(), sitemap(), compress()]
+  }), react(), robotsTxt(), partytown(), sitemap(), compress(), critters()]
 });
