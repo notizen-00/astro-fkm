@@ -4,6 +4,7 @@ import HeroBlog from "@components/hero/HeroBlog.astro";
 import SectionMuted from "@components/section/SectionMuted.astro";
 import Container from "@components/section/Container.astro";
 import SectionTitle from "@components/section/SectionTitle.astro";
+import Section from "@components/section/Section.astro";
 import Card from "@components/base/Card.astro";
 import axios from 'axios';
 
@@ -17,6 +18,11 @@ export async function getStaticPaths() {
               slug
               title
               content
+              author{
+                node{
+                  name
+                }
+              }
             }
           }
         }
@@ -24,9 +30,12 @@ export async function getStaticPaths() {
     });
 
     const posts = response.data.data.posts.nodes;
-    return posts.map((post) => ({
+    return posts.map((post: { slug: any; title: any; content: any; author:any; }) => ({
       params: { slug: post.slug },
-      props: { title: post.title, content: post.content },
+      props: { title: post.title,
+                content: post.content,
+               author: post.author.node.name 
+              },
     }));
   } catch (error) {
     console.error(error);
@@ -34,18 +43,16 @@ export async function getStaticPaths() {
   }
 }
 
-const { title, content } = Astro.props;
+const { title, content ,author } = Astro.props;
 ---
 
 
 
 <Layout title={title}>
-  <HeroBlog judul={title}/>
-  <SectionMuted>
+  <HeroBlog judul={title} author={author}/>
+  <SectionMuted class="'overflow-hidden' ">
     <Container>
-      
-      <Card className="p-6 text-primary-400" set:html={content} >
-      </Card>
+      <Section class="text-center" set:html={content}></Section>
     
     </Container>
   </SectionMuted>

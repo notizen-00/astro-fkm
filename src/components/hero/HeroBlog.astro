@@ -2,7 +2,7 @@
 import ButtonMain from "@components/base/ButtonMain.astro";
 import ButtonSub from "@components/base/ButtonSub.astro";
 import HeroMainModuleOne from "@components/hero/HeroMainModuleOne.astro";
-const { judul} = Astro.props;
+const { judul ,author } = Astro.props;
 ---
 
 <div
@@ -15,14 +15,17 @@ const { judul} = Astro.props;
           class="h-full ptablet:max-w-lg ptablet:mx-auto flex items-center mb-4 ltablet:mb-0 lg:mb-0"
         >
           <div
-            class="text-center ltablet:text-left lg:text-left font-sans space-y-1"
+            class="text-center mx-auto ltablet:text-center lg:text-center font-sans space-y-1"
           >
             <h2
-            class="font-medium text-3xl dark:text-primary-400" >
+            class="font-medium text-3xl text-center dark:text-primary-400" >
             {judul}
             </h2>
+            
              
             </div>
+            <br>
+            <span class="font-small text-3sm text-center dark:text-muted-400">{author}</span>
           </div>
         </div>
       </div>
