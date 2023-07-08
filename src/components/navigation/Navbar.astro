@@ -59,6 +59,16 @@ import NavbarSearchFilters from "@components/navigation/NavbarSearchFilters.astr
         >
           <a href="/doctors">Profil</a>
         </div>
+        <div class="relative py-3 lg:py-5 after:content-[''] after:absolute after:-bottom-1.5 after:left-0 after:h-[3px] after:rounded-t-full after:transition-all after:duration-300 transition-colors duration-300" x-data="{ isOpen: false }">
+          <a href="/inovasi" @click.prevent="isOpen = !isOpen" class="text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800" :class="{'text-primary-500 after:bg-primary-500 after:w-full': isOpen}">
+            DropDown
+          </a>
+          <div class="absolute left-0 w-48 mt-2 py-2 bg-white dark:bg-muted-900 rounded-md shadow-lg" x-show="isOpen" @click.away="isOpen = false">
+            <a href="/inovasi/sub1" class="block px-4 py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800">Sub 1</a>
+            <a href="/inovasi/sub2" class="block px-4 py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800">Sub 2</a>
+            <a href="/inovasi/sub3" class="block px-4 py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800">Sub 3</a>
+          </div>
+        </div>
         <div class="relative py-3 lg:py-5 after:content-[''] after:absolute after:-bottom-1.5 after:left-0 after:h-[3px] after:rounded-t-full after:transition-all after:duration-300 transition-colors duration-300"
           :class="currentUrl.includes('product') ? 'text-primary-500 after:bg-primary-500 after:w-full' : 'text-slate-500 dark:text-slate-400 hover:text-muted-700 dark:hover:text-muted-100 after:w-0'"
         >
