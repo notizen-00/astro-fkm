@@ -57,61 +57,92 @@ import NavbarSearchFilters from "@components/navigation/NavbarSearchFilters.astr
         <div class="relative py-3 lg:py-5 after:content-[''] after:absolute after:-bottom-1.5 after:left-0 after:h-[3px] after:rounded-t-full after:transition-all after:duration-300 transition-colors duration-300"
           :class="currentUrl.includes('doctors') ? 'text-primary-500 after:bg-primary-500 after:w-full' : 'text-slate-500 dark:text-slate-400 hover:text-muted-700 dark:hover:text-muted-100 after:w-0'"
         >
-          <a href="/doctors">Profil</a>
+          <a href="/">Beranda</a>
         </div>
         <div class="relative py-3 lg:py-5 after:content-[''] after:absolute after:-bottom-1.5 after:left-0 after:h-[3px] after:rounded-t-full after:transition-all after:duration-300 transition-colors duration-300" x-data="{ isOpen: false }">
           <a href="/inovasi" @click.prevent="isOpen = !isOpen" class="text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800" :class="{'text-primary-500 after:bg-primary-500 after:w-full': isOpen}">
-            DropDown
+            Profile
           </a>
           <div class="absolute left-0 w-48 mt-2 py-2 bg-white dark:bg-muted-900 rounded-md shadow-lg" x-show="isOpen" @click.away="isOpen = false">
-            <a href="/inovasi/sub1" class="block px-4 py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800">Sub 1</a>
-            <a href="/inovasi/sub2" class="block px-4 py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800">Sub 2</a>
-            <a href="/inovasi/sub3" class="block px-4 py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800">Sub 3</a>
+            <a href="#" class="block px-4 py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800">Visi & Misi</a>
+            <a href="#" class="block px-4 py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800">Struktur Organisasi</a>
+            <a href="#" class="block px-4 py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800">Sejarah</a>
+            <a href="#" class="block px-4 py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800">Program Studi</a>
+            <a href="#" class="block px-4 py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800">Peminatan</a>
           </div>
         </div>
-        <div class="relative py-3 lg:py-5 after:content-[''] after:absolute after:-bottom-1.5 after:left-0 after:h-[3px] after:rounded-t-full after:transition-all after:duration-300 transition-colors duration-300"
-          :class="currentUrl.includes('product') ? 'text-primary-500 after:bg-primary-500 after:w-full' : 'text-slate-500 dark:text-slate-400 hover:text-muted-700 dark:hover:text-muted-100 after:w-0'"
-        >
-          <a href="/akademik">Akademik</a>
+        <div class="relative py-3 lg:py-5 after:content-[''] after:absolute after:-bottom-1.5 after:left-0 after:h-[3px] after:rounded-t-full after:transition-all after:duration-300 transition-colors duration-300" x-data="{ isOpen: false }">
+          <a href="/inovasi" @click.prevent="isOpen = !isOpen" class="text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800" :class="{'text-primary-500 after:bg-primary-500 after:w-full': isOpen}">
+            Penjaminan Mutu
+          </a>
+          <div class="absolute left-0 w-48 mt-2 py-2 bg-white dark:bg-muted-900 rounded-md shadow-lg" x-show="isOpen" @click.away="isOpen = false">
+            <a href="#" class="block px-4 py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800">Analisis Risiko</a>
+            <a href="#" class="block px-4 py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800">Audit Mutu Internal</a>
+            <a href="#" class="block px-4 py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800">Dokumen SPMI</a>
+            <a href="#" class="block px-4 py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800">Laporan Akuntabilitas Kinerja</a>
+            <a href="#" class="block px-4 py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800">Laporan Kegiatan GPM</a>
+            <a href="#" class="block px-4 py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800">Standar Operasional Prosedur</a>
+            <a href="#" class="block px-4 py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800">Struktur Operasional GPM</a>
+          </div>
         </div>
-        <div class="relative py-3 lg:py-5 text-slate-500 dark:text-slate-400 hover:text-muted-700 dark:hover:text-muted-100 transition-colors duration-300">
-          <a href="/riset">Riset</a>
+        <div class="relative py-3 lg:py-5 after:content-[''] after:absolute after:-bottom-1.5 after:left-0 after:h-[3px] after:rounded-t-full after:transition-all after:duration-300 transition-colors duration-300" x-data="{ isOpen: false }">
+          <a href="/inovasi" @click.prevent="isOpen = !isOpen" class="text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800" :class="{'text-primary-500 after:bg-primary-500 after:w-full': isOpen}">
+            Kemahasiswaan
+          </a>
+          <div class="absolute left-0 w-48 mt-2 py-2 bg-white dark:bg-muted-900 rounded-md shadow-lg" x-show="isOpen" @click.away="isOpen = false">
+            <a href="#" class="block px-4 py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800">Badan Eksekutif Mahasiswa</a>
+            <a href="#" class="block px-4 py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800">Badan Perwakilan Mahasiswa</a>
+            <a href="#" class="block px-4 py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800">HIMAGIZI</a>
+            <a href="#" class="block px-4 py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800">HIMAKESMA</a>
+            <a href="#" class="block px-4 py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800">Pengengalan Kehidupan Kampus Mahasiswa Baru</a>
+            <a href="#" class="block px-4 py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800">Unit Kegiatan Mahasiswa</a>
+            <a href="#" class="block px-4 py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800">Prestasi Mahasiswa</a>
+          </div>
         </div>
-        <div class="relative py-3 lg:py-5 after:content-[''] after:absolute after:-bottom-1.5 after:left-0 after:h-[3px] after:rounded-t-full after:transition-all after:duration-300 transition-colors duration-300"
-          :class="currentUrl.includes('about') ? 'text-primary-500 after:bg-primary-500 after:w-full' : 'text-slate-500 dark:text-slate-400 hover:text-muted-700 dark:hover:text-muted-100 after:w-0'"
-        >
-          <a href="/inovasi">Inovasi</a>
+        <div class="relative py-3 lg:py-5 after:content-[''] after:absolute after:-bottom-1.5 after:left-0 after:h-[3px] after:rounded-t-full after:transition-all after:duration-300 transition-colors duration-300" x-data="{ isOpen: false }">
+          <a href="/inovasi" @click.prevent="isOpen = !isOpen" class="text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800" :class="{'text-primary-500 after:bg-primary-500 after:w-full': isOpen}">
+            Fasilitas
+          </a>
+          <div class="absolute left-0 w-48 mt-2 py-2 bg-white dark:bg-muted-900 rounded-md shadow-lg" x-show="isOpen" @click.away="isOpen = false">
+            <a href="#" class="block px-4 py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800">Laboratorium AVA (PKIP)</a>
+            <a href="#" class="block px-4 py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800">Laboratorium Epidemiologi</a>
+            <a href="#" class="block px-4 py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800">Laboratorium Gizi</a>
+            <a href="#" class="block px-4 py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800">Laboratorium Kesehatan dan Keselamatan Kerja</a>
+            <a href="#" class="block px-4 py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800">Laboratorium Kesehatan Lingkungan</a>
+            <a href="#" class="block px-4 py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800">Ruang Baca</a>
+          </div>
         </div>
-        <div class="relative py-3 lg:py-5 text-slate-500 dark:text-slate-400 hover:text-muted-700 dark:hover:text-muted-100 transition-colors duration-300">
-          <a href="/fasilitas">Fasilitas</a>
-        </div>
-        <div class="relative py-3 lg:py-5 text-slate-500 dark:text-slate-400 hover:text-muted-700 dark:hover:text-muted-100 transition-colors duration-300">
-          <a href="/gpm">GPM</a>
-        </div>
-        <!-- <div class="relative py-3 lg:py-5 text-slate-500 dark:text-slate-400 hover:text-muted-700 dark:hover:text-muted-100 transition-colors duration-300">
-          <a href="#">GPM</a>
-        </div> -->
-        
+        <div class="relative py-3 lg:py-5 after:content-[''] after:absolute after:-bottom-1.5 after:left-0 after:h-[3px] after:rounded-t-full after:transition-all after:duration-300 transition-colors duration-300" x-data="{ isOpen: false }">
+          <a href="/inovasi" @click.prevent="isOpen = !isOpen" class="text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800" :class="{'text-primary-500 after:bg-primary-500 after:w-full': isOpen}">
+            Akademik
+          </a>
+          <div class="absolute left-0 w-48 mt-2 py-2 bg-white dark:bg-muted-900 rounded-md shadow-lg" x-show="isOpen" @click.away="isOpen = false">
+            <a href="#" class="block px-4 py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800">Beasiswa</a>
+            <a href="#" class="block px-4 py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800">Buku Pedoman Akademik 2023</a>
+            <a href="#" class="block px-4 py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800">Mata Kuliah S1 Gizi</a>
+            <a href="#" class="block px-4 py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800">Mata Kuliah S1 Kesehatan Masyarakat</a>
+            <a href="#" class="block px-4 py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800">Kaji Etik Penelitian Kesehatan</a>
+            <a href="#" class="block px-4 py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800">Kalender Akademik</a>
+            <a href="#" class="block px-4 py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800">Pengalaman Belajar Lapangan</a>
+            <a href="#" class="block px-4 py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800">Program Magang Mahasiswa</a>
+            <a href="#" class="block px-4 py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800">Struktur Kurikulum S1 Gizi</a>
+            <a href="#" class="block px-4 py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800">Struktur Kurikulum S1 Kesehatan Masyarakat</a>
+            <a href="#" class="block px-4 py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800">Webinar</a>
+          </div>
+        </div>    
         <div class="relative py-3 lg:py-5 text-slate-500 dark:text-slate-400 hover:text-muted-700 dark:hover:text-muted-100 transition-colors duration-300">
           <a href="https://blog.fkm.unej.ac.id/" target="_blank">Blog</a>
         </div>
-        
-
         <div
         class="flex-col items-center lg:justify-end gap-x-6"
-        :class="$store.app.mobileOpen ? 'absolute top-[80px] left-0 w-full flex text-center px-6 pt-2 pb-6 border-t border-muted-200 dark:border-muted-800 bg-white dark:bg-muted-900 shadow-lg shadow-muted-300/40 dark:shadow-muted-900/50' : 'hidden lg:flex lg:flex-row'"
-      >
-       
-
-    
+        :class="$store.app.mobileOpen ? 'absolute top-[80px] left-0 w-full flex text-center px-6 pt-2 pb-6 border-t border-muted-200 dark:border-muted-800 bg-white dark:bg-muted-900 shadow-lg shadow-muted-300/40 dark:shadow-muted-900/50' : 'hidden lg:flex lg:flex-row'">
         <div class="py-3 lg:py-5">
-          <ThemeToggler />
+          <ThemeToggler>
         </div>
       </div>
       <div class="w-full md:w-auto">
         <ButtonMain to={"https://unej.ac.id/penerimaan-mahasiswa-baru/"} target={false} class="'w-full md:w-[240px] lg:w-[110px]'"
-          >Pendaftaran </ButtonMain
-        >
+          >Pendaftaran </ButtonMain>
       </div>
     </div>
   </div>
