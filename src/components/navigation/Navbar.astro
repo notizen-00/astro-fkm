@@ -45,7 +45,7 @@ import NavbarSearchFilters from "@components/navigation/NavbarSearchFilters.astr
         <div class="relative py-3 lg:py-5 after:content-[''] after:absolute after:-bottom-1.5 after:left-0 after:h-[3px] after:rounded-t-full after:transition-all after:duration-300 transition-colors duration-300" x-data="{ isOpen: false }">
           <a href="/inovasi" @click.prevent="isOpen = !isOpen" class="text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800" :class="{'text-primary-500 after:bg-primary-500 after:w-full': isOpen}">
             <span class="flex items-center justify-between">
-              <span>Profile</span>
+              <span>Profil</span>
               <svg class="w-4 h-4 transform transition-transform duration-300" :class="{'rotate-180': isOpen}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
               </svg>
@@ -146,11 +146,8 @@ import NavbarSearchFilters from "@components/navigation/NavbarSearchFilters.astr
             <a href="#" class="block px-4 py-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800">Webinar</a>
           </div>
         </div>    
-        <div class="relative py-3 lg:py-5 text-slate-500 dark:text-slate-400 hover:text-muted-700 dark:hover:text-muted-100 transition-colors duration-300">
-          <a href="https://blog.fkm.unej.ac.id/" target="_blank">Blog</a>
-        </div>
         <div class="w-full md:w-auto">
-          <ButtonMain to={"https://unej.ac.id/penerimaan-mahasiswa-baru/"} target={false} class="'w-full md:w-[240px] lg:w-[110px]'">Pendaftaran</ButtonMain>
+          <ButtonMain to={"https://blog.fkm.unej.ac.id/"} target={false} class="'w-full md:w-[240px] lg:w-[110px]'">Blog</ButtonMain>
         </div>
         <div class="flex items-center justify-center h-20 w-20">
           <ThemeToggler />
