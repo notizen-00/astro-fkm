@@ -38,10 +38,6 @@ import NavbarSearchFilters from "@components/navigation/NavbarSearchFilters.astr
       class="flex-col items-center lg:justify-end gap-x-6"
       :class="$store.app.mobileOpen ? 'absolute top-[80px] left-0 w-full flex text-center px-6 pt-2 pb-6 border-t border-muted-200 dark:border-muted-800 bg-white dark:bg-muted-900 shadow-lg shadow-muted-300/40 dark:shadow-muted-900/50' : 'hidden lg:flex lg:flex-row'"
     >
-      <div class="flex flex-col lg:flex-row items-center gap-x-6">
-        <div class="relative py-3 lg:py-5 after:content-[''] after:absolute after:-bottom-1.5 after:left-0 after:h-[3px] after:rounded-t-full after:transition-all after:duration-300 transition-colors duration-300" :class="currentUrl.includes('doctors') ? 'text-primary-500 after:bg-primary-500 after:w-full' : 'text-slate-500 dark:text-slate-400 hover:text-muted-700 dark:hover:text-muted-100 after:w-0'">
-          <a href="/">Beranda</a>
-        </div>
         <div class="relative py-3 lg:py-5 after:content-[''] after:absolute after:-bottom-1.5 after:left-0 after:h-[3px] after:rounded-t-full after:transition-all after:duration-300 transition-colors duration-300" x-data="{ isOpen: false }">
           <a href="/inovasi" @click.prevent="isOpen = !isOpen" class="text-slate-500 dark:text-slate-400 hover:text-primary-500 hover:bg-primary-50 dark:hover:bg-muted-800" :class="{'text-primary-500 after:bg-primary-500 after:w-full': isOpen}">
             <span class="flex items-center justify-between">
