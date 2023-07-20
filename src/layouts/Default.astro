@@ -69,7 +69,15 @@ const { title } = Astro.props;
     <slot />
 
 
-    <GoogleAnalytics id="G-RTZ40J5VSD" partytown={true}/>
+     <script  src="../js/main"></script>
+    <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-BQWH541JPC"></script> 
+<script type="text/partytown"> 
+  window.dataLayer = window.dataLayer || []; 
+  function gtag(){dataLayer.push(arguments);} 
+  gtag('js', new Date()); 
+ 
+  gtag('config', 'G-BQWH541JPC'); 
+</script>
     <!-- Footer -->
     <Footer />
 
